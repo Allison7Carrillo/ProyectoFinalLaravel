@@ -15,10 +15,10 @@ class CreateVentasTable extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('price');
+            $table->string('producto');
+            $table->float('price');
+            $table->unsignedInteger('cantidad');
             $table->rememberToken();
-            $table->timestamps();
             $table->timestamps();
         });
     }
